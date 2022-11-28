@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#rubrik {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: flexbox;
+    grid-area: hea;
+    justify-content: center;
+    height: 110px;
+    background-color: rgb(95, 141, 78);
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+h1 {
+    font-size: 4rem;
+    font-family: 'Gemunu Libre', sans-serif;
+    color: rgb(40, 84, 48);
+}
+h1:hover {
+    color:rgb(229, 217, 182);
+}
+
+a {
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(40, 84, 48);
+}
+
+a:hover {
+    color: rgb(229, 217, 182);
+}
+
+.gridwrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-template-areas:
+        "hea hea"
+        "bg1 bg2"
+        "bg1 bg2"
+        "bg1 bg3"
+        "foo foo";
+}
+
+.section_1{
+    display: flex;
+    grid-area: bg1;
+    background-image: linear-gradient(to bottom right, rgb(164, 190, 123), rgb(247, 255, 98));
+}
+.section_2{
+    display: flex;
+    grid-area: bg2;
+    background-image: linear-gradient(to bottom right, rgb(164, 190, 123), yellow);
+}
+.section_3{
+    display: flex;
+    grid-area: bg3;
+    background-image: linear-gradient(to bottom right, rgb(164, 190, 123), yellow);
+}
+
+footer {
+    grid-area: foo;
+    height: minmax(110px, 100vh);
+    background-color: rgb(95, 141, 78);
+}
