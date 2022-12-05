@@ -6,6 +6,10 @@
     margin: 0px;
 }
 
+p {
+    font-size: 1rem;
+}
+
 #rubrik {
     display: flex;
     justify-content: center;
@@ -41,37 +45,41 @@ a:hover {
     color: rgb(229, 217, 182);
 }
 
-.gridwrapper {
+.grid_wrapper {
     display: grid;
     height: 100vh;
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 110px 1fr 1fr 1fr 50px;
     grid-template-areas:
         "hea hea"
-        "bg1 bg2"
-        "bg1 bg2"
-        "bg1 bg3"
+        "se1 se2"
+        "se1 se2"
+        "se1 se3"
         "foo foo";
+}
+
+section {
+    display: flex;
+    background-image: linear-gradient(to bottom right, rgb(164, 190, 123), rgb(247, 255, 98));
 }
 
 .section_1{
     display: flex;
-    grid-area: bg1;
-    background-image: linear-gradient(to bottom right, rgb(164, 190, 123), rgb(247, 255, 98));
+    grid-area: se1;
+    /*background-image: linear-gradient(to bottom right, rgb(164, 190, 123), rgb(247, 255, 98));*/
 }
 .section_2{
     display: flex;
-    grid-area: bg2;
-    background-image: linear-gradient(to bottom right, rgb(164, 190, 123), yellow);
+    grid-area: se2;
+    /*background-image: linear-gradient(to bottom right, rgb(164, 190, 123), yellow);*/
 }
 .section_3{
     display: flex;
-    grid-area: bg3;
-    background-image: linear-gradient(to bottom right, rgb(164, 190, 123), yellow);
+    grid-area: se3;
+    /*background-image: linear-gradient(to bottom right, rgb(164, 190, 123), yellow);*/
 }
 
 footer {
     grid-area: foo;
-    height: minmax(110px, 100vh);
     background-color: rgb(95, 141, 78);
 }
