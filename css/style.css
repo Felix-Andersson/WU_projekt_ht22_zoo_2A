@@ -4,6 +4,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 p {
@@ -45,41 +46,101 @@ a:hover {
     color: rgb(229, 217, 182);
 }
 
+h2 {
+    font-size: 2rem;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin: 10px;
+}
+
 .grid_wrapper {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 110px 1fr 1fr 1fr 50px;
     grid-template-areas:
-        "hea hea"
-        "se1 se2"
-        "se1 se2"
-        "se1 se3"
-        "foo foo";
+        "hea hea hea hea"
+        "se1 se2 se3 se3"
+        "se1 se2 se3 se3"
+        "se1 se2 se4 se4"
+        "foo foo foo foo";
 }
 
 section {
     display: flex;
-    background-image: linear-gradient(to bottom right, rgb(164, 190, 123), rgb(247, 255, 98));
 }
 
 .section_1{
     display: flex;
     grid-area: se1;
-    /*background-image: linear-gradient(to bottom right, rgb(164, 190, 123), rgb(247, 255, 98));*/
 }
 .section_2{
     display: flex;
     grid-area: se2;
-    /*background-image: linear-gradient(to bottom right, rgb(164, 190, 123), yellow);*/
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
 }
 .section_3{
     display: flex;
     grid-area: se3;
-    /*background-image: linear-gradient(to bottom right, rgb(164, 190, 123), yellow);*/
+}
+.section_4{
+    display: flex;
+    grid-area: se4;
 }
 
 footer {
     grid-area: foo;
     background-color: rgb(95, 141, 78);
+}
+
+#section_all {
+    background-image: linear-gradient(to bottom right, rgb(149, 185, 91), rgb(255, 255, 90));
+    position: absolute;
+    top: 110px;
+    left: 0px;
+    width: 100vw;
+    height: 600px;
+    z-index: -1;
+}
+
+.djur {
+    height: auto;
+    width: 150px;
+    border: 5px rgb(40, 84, 48);
+    border-radius: 5px;
+}
+
+img {
+    border: 5px solid black;
+}
+
+
+
+
+
+
+
+
+
+#section_personal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article_personal {
+    width: 150px;
+    height: 210px;
+    border: 3px black;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#personal_1 {
+    background:rgb(40, 84, 48);
+    background-size: contain;
 }
