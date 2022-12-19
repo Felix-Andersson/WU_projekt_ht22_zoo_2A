@@ -9,6 +9,7 @@
 
 p {
     font-size: 1rem;
+    margin-left: 7px;
 }
 
 #rubrik {
@@ -36,6 +37,19 @@ h1:hover {
     color:rgb(229, 217, 182);
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-family: 'Gemunu Libre', sans-serif;
+    margin-left: 7px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-left: 7px;
+}
+
 a {
     font-family: 'Gemunu Libre', sans-serif;
     font-size: 1.5rem;
@@ -46,16 +60,10 @@ a:hover {
     color: rgb(229, 217, 182);
 }
 
-h2 {
-    font-size: 2rem;
-    font-family: 'Gemunu Libre', sans-serif;
-    margin: 10px;
-}
-
 .grid_wrapper {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 2fr 2fr;
     grid-template-rows: 110px 1fr 1fr 1fr 50px;
     grid-template-areas:
         "hea hea hea hea"
@@ -72,6 +80,7 @@ section {
 .section_1{
     display: flex;
     grid-area: se1;
+    flex-direction: column;
 }
 .section_2{
     display: flex;
@@ -107,12 +116,17 @@ footer {
 .djur {
     height: auto;
     width: 150px;
-    border: 5px rgb(40, 84, 48);
+    border: 5px solid rgb(40, 84, 48);
     border-radius: 5px;
 }
 
-img {
-    border: 5px solid black;
+#owner {
+    height: 150px;
+    width: 150px;
+    background-image: url("/img/persons/owner.jpg");
+    background-size: 140px;
+    border: 5px solid rgb(40, 84, 48);
+    border-radius: 5px;
 }
 
 
