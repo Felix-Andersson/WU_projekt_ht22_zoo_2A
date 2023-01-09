@@ -8,11 +8,11 @@
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-left: 7px;
 }
 
-#rubrik {
+.rubrik {
     display: flex;
     justify-content: center;
 }
@@ -38,7 +38,7 @@ h1:hover {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'Gemunu Libre', sans-serif;
     margin-left: 7px;
     margin-top: 20px;
@@ -48,6 +48,7 @@ h2 {
 h3 {
     margin-top: 20px;
     margin-left: 7px;
+    font-size: 1.2rem;
 }
 
 a {
@@ -60,7 +61,7 @@ a:hover {
     color: rgb(229, 217, 182);
 }
 
-.grid_wrapper {
+.grid_wrapper_index {
     display: grid;
     height: 100vh;
     grid-template-columns: 3fr 1fr 2fr 2fr;
@@ -103,12 +104,12 @@ footer {
     background-color: rgb(95, 141, 78);
 }
 
-#section_all {
+#background_toned {
     background-image: linear-gradient(to bottom right, rgb(149, 185, 91), rgb(255, 255, 90));
     position: absolute;
     top: 110px;
     left: 0px;
-    width: 100vw;
+    width: 100%;
     height: 600px;
     z-index: -1;
 }
@@ -136,13 +137,21 @@ footer {
 
 
 
-
-#section_personal {
+#meny{
+    grid-area: men;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.article_personal {
+#section_mat {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.article_mat {
     width: 150px;
     height: 210px;
     border: 3px black;
@@ -152,9 +161,147 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgb(20, 20, 20, 1);
+    background:rgb(95, 141, 78);
 }
 
-#personal_1 {
-    background:rgb(40, 84, 48);
+#mat_1 {
+    width: 132px;
+    height: 88px;
+    border-radius: 10px;
+    background-image: url("/img/food/burger.png");                          /*urlen börjar med / vilket är problemet i olika webbläsare, gäller #owner också*/
     background-size: contain;
+}
+#mat_2 {
+    width: 132px;
+    height: 88px;
+    border-radius: 10px;
+    background-image: url("/img/food/fish_and_chips.png");                          /*urlen börjar med / vilket är problemet i olika webbläsare, gäller #owner också*/
+    background-size: contain;
+}
+#mat_3 {
+    width: 132px;
+    height: 88px;
+    border-radius: 10px;
+    background-image: url("/img/food/pizza.png");                          /*urlen börjar med / vilket är problemet i olika webbläsare, gäller #owner också*/
+    background-size: contain;
+}
+#mat_4 {
+    width: 132px;
+    height: 88px;
+    border-radius: 10px;
+    background-image: url("/img/food/taco.png");                          /*urlen börjar med / vilket är problemet i olika webbläsare, gäller #owner också*/
+    background-size: contain;
+}
+
+
+.mitt{
+    display: flex;
+    justify-content: center;
+}
+
+.grid_wrapper_restaurang {
+    display: grid;
+    height: 85vh;
+    grid-template-columns: 300px calc(100% - 600px) 300px;
+    grid-template-rows: 1fr 3fr 50px;
+    grid-template-areas:
+        "si1 tri si2"
+        "si1 men si2"
+        "foo foo foo";
+}
+
+#trivia{
+    grid-area: tri;
+    display: flex;
+    flex-direction: column;
+}
+.trivia_text{
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+#sideimg1{
+    grid-area: si1;
+    height: 100%;
+    width: 300px;
+
+}
+#sideimg2{
+    grid-area: si2;
+    height: 100%;
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+.grid_wrapper_om {
+    display: grid;
+    height: 85vh;
+    grid-template-columns: 300px calc(50% - 300px) calc(50% - 300px) 300px;
+    grid-template-rows: 1fr 1fr 50px;
+    grid-template-areas:
+        "si3 omo asc si4"
+        "si3 hit kar si4"
+        "foo foo foo foo";
+}
+
+#om_oss{
+    grid-area: omo;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#ascii {
+    grid-area: asc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ascii_text:hover {
+    color:rgb(229, 217, 182);
+}
+
+#bigger{
+    font-size: 2rem;
+}
+
+#hitta_hit{
+    grid-area: hit;
+    display: flex;
+    flex-direction: column;
+}
+
+#karta{
+    width: 380px; 
+    height: 220px;
+    border: 5px solid rgb(95, 141, 78);
+    border-radius: 10px;
+}
+#article_karta{
+    grid-area: kar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sideimg3{
+    grid-area: si3;
+    height: 100%;
+    width: 300px;
+}
+#sideimg4{
+    grid-area: si4;
+    height: 100%;
+    width: 300px;
+}
+.hitta_hit_text{
+    margin-left: 30px;
+    margin-right: 20px;
 }
